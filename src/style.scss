@@ -25,6 +25,7 @@ body {
   h1 {
     text-align: center;
     color: #333;
+    margin-bottom: 30px;
   }
 }
 
@@ -73,6 +74,56 @@ body {
 
     &:hover {
       background: #3e8e41;
+    }
+  }
+}
+
+.position-controls {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #eee;
+
+  h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #555;
+    text-align: center;
+  }
+
+  .control-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
+
+    &.horizontal {
+      gap: 50px;
+    }
+
+    button {
+      background: #555;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s;
+      min-width: 120px;
+      justify-content: center;
+
+      &:hover {
+        background: #666;
+        transform: scale(1.05);
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
     }
   }
 }
@@ -138,30 +189,24 @@ body {
 .cropper-controls {
   display: flex;
   justify-content: center;
-  gap: 20px;
   padding: 15px;
   background: #444;
 
-  .control-group {
+  button {
+    background: #4a6baf;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
     display: flex;
-    gap: 10px;
     align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    transition: background 0.3s;
 
-    button {
-      background: #555;
-      color: white;
-      border: none;
-      padding: 8px 15px;
-      border-radius: 5px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: background 0.3s;
-
-      &:hover {
-        background: #666;
-      }
+    &:hover {
+      background: #3a5a9f;
     }
   }
 }
@@ -184,5 +229,7 @@ body {
     max-width: 90%;
     max-height: 90%;
     object-fit: contain;
+    border: 2px solid white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
   }
 }
